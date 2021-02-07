@@ -1,7 +1,6 @@
 package main
 
 import "fmt"
-import "reflect"
 
 func main(){
 
@@ -10,30 +9,21 @@ func main(){
 //int, float32,string, bool
 
 //Composite Data Types Maps
-//array
-// bracket = []
-// braces/curly braces = {}
-// parenthesis = ()
+//Maps
+//Key = value
 
-//slice
-//more than array
+//null
+//nil
 
-//var students [3]string
-//students[0]="Asgor"
-//students[1]="Mainul"
-//students[2]="Anonnya"
-//x := students[0:3]
+//var x map[string]string
+x := make(map[string]string)
 
-//x := make([]string, 0)
-var fruits []string
-fruits = append(fruits, "Apple", "Banana", "Mango")
-//fmt.Println(fruits, len(fruits))
+x["name"] = "Mostain"
+x["height"] = "5.7"
+x["address"] = "Dhaka"
 
-//fmt.Printf("%T\n", fruits)
-//fmt.Printf("%T\n", students)
+//delete(x, "height")
 
-b := reflect.TypeOf(fruits).Kind().String()
-fmt.Println(b)
- 
+fmt.Println(x)
 
 }
