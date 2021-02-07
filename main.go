@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+<<<<<<< HEAD
 func main(){
 
 //primitive data types
@@ -49,3 +50,11 @@ fmt.Println(students, len(students))
  
 
 }
+=======
+func main() {
+
+	fmt.Println("Hello Bangladesh")
+	fmt.Println("github local to remote")
+
+}
+>>>>>>> 7a52c93944fafce3cf182700c40abfb57ed7a14b
