@@ -10,44 +10,22 @@ func main(){
 //int, float32,string, bool
 
 //Composite Data Types Maps
-//array
-// bracket = []
-// braces/curly braces = {}
-// parenthesis = ()
+//Maps
+//Key = value
 
-//var students [3]string
-//fixed length
-//same type
-//index count start from 0
+//null
+//nil
 
-//0,1,2,3,4 
-//data set or data assign
-//students[0]="Asgor"
-//students[1]="Mainul"
-//students[2]="Anonnya"
+//var x map[string]string
+x := make(map[string]string)
 
-//[  ]
-//fmt.Println(students)
-//fmt.Println(len(students))
+x["name"] = "Mostain"
+x["height"] = "5.7"
+x["address"] = "Dhaka"
 
-//data pull, data retrieve, data get
-//fmt.Println(students[2])
+//delete(x, "height")
 
-//short hand way, string literals
-//In computer science, a literal is a notation 
-//for representing a fixed value in source code
-//implicit= ...
-
-students := [...]string{"Asgor", "Mainul", "Anonnya", "Mostain", "Sumaiya"}
-fmt.Println(students, len(students))
-
-
-
-//slice
-//map
-//struct
-
- 
+fmt.Println(x)
 
 }
 =======
