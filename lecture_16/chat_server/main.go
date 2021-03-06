@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	nl, err := net.Listen("tcp", ":8888")
+	nl, err := net.Listen("tcp", "91.205.173.170:8888")
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
