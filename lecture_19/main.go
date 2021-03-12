@@ -9,6 +9,7 @@ import (
 func main() {
 
 	http.HandleFunc("/", home)
+	http.HandleFunc("/request", request)
 	http.HandleFunc("/features", features)
 	http.HandleFunc("/docs", docs)
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("assets"))))
@@ -55,4 +56,15 @@ func docs(w http.ResponseWriter, r *http.Request) {
 
 	ptmp.Execute(w, nil)
 	//fmt.Fprintf(w, `welcome`)
+}
+
+func request(w http.ResponseWriter, r *http.Request) {
+
+	//method-1
+	name := r.FormValue("name")
+	company := r.FormValue("company")
+	email := r.FormValue("email")
+
+	fmt.Println(name, company, email)
+	fmt.Fprintf(w, `received %s %s %s`, name, company, email) //response
 }
