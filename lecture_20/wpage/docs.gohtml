@@ -1,0 +1,65 @@
+ {{block "container" .}}
+     <!-- Head -->
+     <section class="docs-head bg-primary py-3">
+        <div class="container grid">
+            <div>
+                <h1 class="xl">Docs</h1>
+                <p class="lead">
+                    Learn how to work with Loruki Platform
+                </p>
+            </div>
+            <img src="images/docs.png" alt="">
+        </div>
+    </section>
+
+    <!-- Docs main -->
+    <section class="docs-main my-4">
+        <div class="container grid">
+            <div class="card bg-light p-3">
+                <h3 class="my-2">Essentials</h3>
+                    <nav>
+                        <ul>
+                            <li><a class="text-primary" href="">Introduction</a></li>
+                            <li><a class="text-primary" href="">About Loruki</a></li>
+                            <li><a class="text-primary" href="">Installation</a></li>
+                        </ul>
+                    </nav>
+
+                    <h3 class="my-2">Deployment</h3>
+                    <nav>
+                        <ul>
+                            <li><a class="text-primary" href="">Setting up a container</a></li>
+                            <li><a class="text-primary" href="">Using the CLI</a></li>
+                            <li><a class="text-primary" href="">Managing resources</a></li>
+                            <li><a class="text-primary" href="">Upgrade & downgrade</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="card">
+                    <h2>Introduction</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt in natus ullam adipisci distinctio. Debitis expedita laborum ad sapiente eum architecto omnis assumenda. Dolorum soluta, expedita modi facilis porro eveniet.</p>
+                    <div class="alert alert-success">
+                        <i class="fas fa-info"></i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, molestias?
+                    </div>
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, corrupti ipsum, cumque impedit, tempora in voluptatibus mollitia sint aliquam reiciendis saepe magni. Aspernatur, sunt nostrum. Animi totam quibusdam quod vero?</p>
+                    <a href="#" class="btn btn-primary">Install CLI</a>
+
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Windows 10, Mac OSX, Linux</li>
+                        <li>Node.js v12 or higher</li>
+                    </ul>
+
+                    <h3>Install</h3>
+                    <p>Mac (Homebrew)</p>
+                    <pre><code>$ brew install loruki-cli</code></pre>
+                    <p>NPM</p>
+                    <pre><code>$ npm install loruki-cli</code></pre>
+                    <p>Yarn</p>
+                    <pre><code>$ yarn install loruki-cli</code></pre>
+                </div>
+        </div>
+    </section>
+
+    {{end}}
