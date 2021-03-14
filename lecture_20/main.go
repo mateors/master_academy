@@ -30,7 +30,6 @@ func init() {
 	//fmt.Println("db connection successful")
 
 	//couchbase connection block
-
 	db = mcb.Connect("localhost", "mostain", "test123")
 	res, err := db.Ping()
 	if err != nil {
@@ -44,8 +43,8 @@ func init() {
 func main() {
 
 	http.HandleFunc("/", home)
-	//http.HandleFunc("/request", request)
-	http.HandleFunc("/requestc", requestc)
+	http.HandleFunc("/request", request)
+	//http.HandleFunc("/requestc", requestc)
 	http.HandleFunc("/features", features)
 	http.HandleFunc("/docs", docs)
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("assets"))))
@@ -132,7 +131,7 @@ type RequestTable struct {
 	Status  int    `json:"status"`
 }
 
-func requestc(w http.ResponseWriter, r *http.Request) {
+func request(w http.ResponseWriter, r *http.Request) {
 
 	//method-1
 	// name := r.FormValue("name")
@@ -150,9 +149,10 @@ func requestc(w http.ResponseWriter, r *http.Request) {
 
 	var reqTable RequestTable
 
-	r.Form.Add("aid", "request::3") //we will update later
 	r.Form.Add("bucket", "master_academy")
+	r.Form.Add("aid", "request::6") //we will update later
 	r.Form.Add("type", "request")
+	r.Form.Add("status", "1")
 	pRes := db.Insert(r.Form, &reqTable)
 	fmt.Println(pRes.Status, pRes.Errors)
 

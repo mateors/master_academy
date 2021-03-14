@@ -40,7 +40,7 @@
 
                 <div class="showcase-form card">
                     <h2>Request a demo</h2>
-                    <form action="/requestc" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <form id="reqForm" action="/request" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
 
                         <div class="form-control">
                             <input type="text" name="name" placeholder="Name" required>
@@ -175,5 +175,47 @@
             </footer>
     {{end}}
     
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <script>
+
+    $(document).ready(function() {
+
+        //alert("loaded succesfully");
+
+        $('#reqForm').submit(function(){
+        
+            //alert('submit btn pressed');
+
+                $.ajax({
+                async: true,
+                type: "POST",
+                url: "/request",
+                data: $('#reqForm').serialize(),
+                error: function(err, stsco){
+                        alert(e,stsco);
+                }
+                
+                }).done(function(rdata){
+
+                    //alert(rdata);
+                    location.reload();
+
+                });
+            return false;
+
+
+        });
+
+
+
+    });
+
+  </script>
+
 </body>
 </html>
