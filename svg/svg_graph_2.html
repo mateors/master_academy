@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .graph {
+            /* border: 1px solid rgba(0,0,0,.1);
+            border-radius: 4px;
+            background-color: rgba(255,255,255,.9);
+            box-shadow: 3px 3px 10px rgba(0,0,0,.1); */
+            position: auto;
+            z-index: 50;           
+            height: 400px;
+            width: 100%;
+        }
+        .x-axis {
+            text-anchor: middle;
+            font-weight: bold;
+        }
+        .y-axis {
+            text-anchor: end;
+            font-weight: bold;
+        }  
+    </style>
+</head>
+<body>
+    <div >
+
+        <svg class="graph" style="padding: 50px;">
+
+            <rect x="30" y="0" width="50%" height="300px" fill="white" stroke="black"></rect>
+
+            <g class="x-axis">
+                <text x="130" y="320">1</text>               
+                <text x="230" y="320">2</text>
+                <text x="330" y="320">3</text>
+                <text x="430" y="320">4</text>                 
+            </g>
+                 
+            <g class="y-axis">                                 
+                <text x="15" y="55">50</text>
+                <text x="15" y="105">40</text>   
+                <text x="15" y="155">30</text>
+                <text x="15" y="205">20</text>   
+                <text x="15" y="255">10</text>
+                <text x="15" y="305">0</text>
+            </g>   
+
+            <line x1="130" y1="300" x2="130" y2="0" style="stroke:red;stroke-width:2" />
+            <line x1="230" y1="300" x2="230" y2="0" style="stroke:black;stroke-width:2" />
+            <line x1="330" y1="300" x2="330" y2="0" style="stroke:black;stroke-width:2" />
+            <line x1="430" y1="300" x2="430" y2="0" style="stroke:black;stroke-width:2" />
+            <line x1="530" y1="300" x2="530" y2="0" style="stroke:black;stroke-width:2" />
+            
+
+            <line x1="30" y1="50" x2="630" y2="50" style="stroke:red;stroke-width:2" />
+            <line x1="30" y1="100" x2="630" y2="100" style="stroke:black;stroke-width:2" />
+            <line x1="30" y1="150" x2="630" y2="150" style="stroke:black;stroke-width:2" />
+            <line x1="30" y1="200" x2="630" y2="200" style="stroke:black;stroke-width:2" />
+            <line x1="30" y1="250" x2="630" y2="250" style="stroke:black;stroke-width:2" />
+            
+            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:gray;stop-opacity:1"></stop>
+                <stop offset="100%" style="stop-color:white;stop-opacity:0"></stop>
+            </linearGradient>
+
+            <polyline fill="none" stroke="red" stroke-width="2"
+            points="130,200,230,190,330,225,380,175"></polyline>
+
+            <polyline fill="url(#grad)" stroke="#34becd" stroke-width="0" points="
+            130,300,130,200,230,190,330,225,380,175,380,300"></polyline>
+
+            <g style="background-color: black;">
+                <circle class="cir" cx="130" cy="200" data-value="8.1" r="6"></circle>
+                <circle class="cir" cx="230" cy="190" data-value="7.7" r="6"></circle>
+                <circle class="cir" cx="330" cy="225" data-value="6.8" r="6"></circle>
+                <circle class="cir" cx="380" cy="175" data-value="8.1" r="6"></circle>
+            </g>        
+
+            
+            
+        </svg>
+    </div>
+</body>
+</html>
