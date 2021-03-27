@@ -1,8 +1,8 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"reflect"
 	"strconv"
 )
 
@@ -16,18 +16,32 @@ func main() {
 	// result2 := Sum2(10, 20, "60")
 	// fmt.Println(result2)
 
-	stooges := [...]string{"Moe", "Larry", "Curly"}
-	stooges2 := []string{"Moe", "Larry", "Curly"}
+	stooges := [...]string{"Asgor", "Anonnya", "Nasarul"}
+	//["Asgor", "Anonnya","Nasarul"]
+
+	bs, err := json.Marshal(stooges)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	fmt.Println(bs)
+	fmt.Println(string(bs))
+
+	var students interface{}
+	json.Unmarshal(bs, &students)
+	fmt.Println(students)
+
+	//stooges2 := []string{"Moe", "Larry", "Curly"}
 	// fmt.Println(stooges)
 	// fmt.Println(stooges2)
 
-	fmt.Printf("%T\n", stooges)
-	fmt.Printf("%T\n", stooges2)
+	// fmt.Printf("%T\n", stooges)
+	// fmt.Printf("%T\n", stooges2)
 
-	reftype := reflect.TypeOf(stooges).Kind().String()
-	reftype2 := reflect.TypeOf(stooges2).Kind().String()
-	fmt.Println(reftype)
-	fmt.Println(reftype2)
+	// reftype := reflect.TypeOf(stooges).Kind().String()
+	// reftype2 := reflect.TypeOf(stooges2).Kind().String()
+	// fmt.Println(reftype)
+	// fmt.Println(reftype2)
 
 	// for i, slc := range strSlc {
 	// 	res := Sum2(slc)
