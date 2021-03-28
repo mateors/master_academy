@@ -28,10 +28,26 @@ func main() {
 	// fmt.Println(fi.Size())
 
 	//how to make a folder
-	err := os.Mkdir("master_academy", 0777)
-	if err != nil {
-		fmt.Println(err.Error())
-	}
+	// err := os.Mkdir("master_academy", 0777)
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// }
+
+	//base := filepath.Base(dir)
+	//relativePath := filepath.Join("master_academy")
+	//absolutePath, _ := filepath.Abs("master_academy")
+
+	//E:\GOLANG\src\master_academy\lecture_24\master_academy
+	// newPath := filepath.Join(absolutePath, "..", "..", "lecture_25")
+	// fmt.Println(base)
+	// //fmt.Println(relativePath)
+	// fmt.Println(absolutePath)
+	// fmt.Println(newPath)
+	// os.Mkdir(newPath, 777)
+
+	//os.Mkdir(`D:\TEST`, 777)
+	os.Rename(`D:\TEST`, `D:\TEST_01`)
+
 }
 
 func createFile(fileName, content string) bool {
