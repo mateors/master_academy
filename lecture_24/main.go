@@ -14,8 +14,19 @@ func main() {
 
 	// fmt.Println(dir)
 
-	isErr := createFile("master_academy2.txt", "hello bangladesh")
-	fmt.Println(isErr)
+	// isErr := createFile("master_academy2.txt", "hello bangladesh")
+	// fmt.Println(isErr)
+
+	fi, err := os.Stat("master_academy2.txt")
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+
+	fmt.Println(fi.IsDir())
+	fmt.Println(fi.ModTime().Date())
+	fmt.Println(fi.Name())
+	fmt.Println(fi.Size())
+
 }
 
 func createFile(fileName, content string) bool {
