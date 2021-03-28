@@ -17,16 +17,21 @@ func main() {
 	// isErr := createFile("master_academy2.txt", "hello bangladesh")
 	// fmt.Println(isErr)
 
-	fi, err := os.Stat("master_academy2.txt")
+	// fi, err := os.Stat("master_academy2.txt")
+	// if err != nil {
+	// 	fmt.Println(err.Error())
+	// }
+
+	// fmt.Println(fi.IsDir())
+	// fmt.Println(fi.ModTime().Date())
+	// fmt.Println(fi.Name())
+	// fmt.Println(fi.Size())
+
+	//how to make a folder
+	err := os.Mkdir("master_academy", 0777)
 	if err != nil {
 		fmt.Println(err.Error())
 	}
-
-	fmt.Println(fi.IsDir())
-	fmt.Println(fi.ModTime().Date())
-	fmt.Println(fi.Name())
-	fmt.Println(fi.Size())
-
 }
 
 func createFile(fileName, content string) bool {
