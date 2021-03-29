@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	send("bill.rassel@gmail.com", "Bismillah testing from golang")
+	send("nasirmolla11shuvo@gmail.com", "Bismillah testing from golang")
 }
 
 //before sending email
@@ -14,13 +14,13 @@ func main() {
 //and app password is generated
 func send(to, body string) bool {
 
-	from := "yourusername@gmail.com" //yourusername@gmail.com
-	pass := "yourAppPassword"        //app specific password yourAppPassword
+	from := "billahmdmostain@gmail.com" //yourusername@gmail.com
+	pass := "nrjgzpridpmxwyky"          //app specific password yourAppPassword
 	//to := "bill.rassel@gmail.com" //receiver
 
 	msg := "From: " + from + "\n" +
 		"To: " + to + "\n" +
-		"Subject: Hello mostain\n\n" +
+		"Subject: Hello Nasir\n\n" +
 		body
 
 	err := smtp.SendMail("smtp.gmail.com:587",

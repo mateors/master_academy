@@ -27,6 +27,7 @@ func main() {
 	fmt.Println(bs)
 	fmt.Println(string(bs))
 
+	//json to
 	var students interface{}
 	json.Unmarshal(bs, &students)
 	fmt.Println(students)
