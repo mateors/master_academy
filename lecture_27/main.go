@@ -11,6 +11,7 @@ import (
 )
 
 //https://www.thepolyglotdeveloper.com/2018/02/encrypt-decrypt-data-golang-application-crypto-packages/
+//https://www.melvinvivas.com/how-to-encrypt-and-decrypt-data-using-aes/
 func main() {
 
 	bs := encrypt([]byte("hello"), "test123")
