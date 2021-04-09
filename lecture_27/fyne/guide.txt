@@ -1,0 +1,21 @@
+https://developer.fyne.io/started/cross-compiling
+
+download c compiler
+https://www.msys2.org/
+
+go tool dist list
+
+
+E:\GOLANG\src\fyne.io\fyne\v2\cmd\fyne_demo>go install
+
+E:\GOLANG\src\fyne.io\fyne\cmd\fyne>go install
+
+fyne package -os android -appID com.example.myapp -icon mobileIcon.png
+
+fyne package -os android -appID com.example.myapp -icon ./img/gp.png
+
+no Android NDK found in $ANDROID_HOME/ndk-bundle nor in $ANDROID_NDK_HOME
+
+https://github.com/golang/go/issues/38139
+
+https://developer.android.com/studio/projects/install-ndk
