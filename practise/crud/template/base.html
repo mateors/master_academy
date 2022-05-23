@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material</title>
+
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link href="../assets/css/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@14.0.0/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <header class="mdc-top-app-bar app-bar" id="app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+        <span class="mdc-top-app-bar__title">Dismissible Drawer</span>
+      </section>
+    </div>
+  </header>
+
+  <aside class="mdc-drawer mdc-drawer--modal">
+
+
+    <div class="mdc-drawer__header">
+      <h3 class="mdc-drawer__title">Mail</h3>
+      <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+    </div>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+          <span class="mdc-list-item__text">Inbox</span>
+        </a>
+        
+        <hr class="mdc-list-divider">
+
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+          <span class="mdc-list-item__text">Outgoing</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Drafts</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+
+  <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+    <main class="main-content" id="main-content">
+      App Content
+
+      <div class="mdc-data-table">
+        <div class="mdc-data-table__table-container">
+          <table class="mdc-data-table__table" aria-label="Dessert calories">
+            <thead>
+              <tr class="mdc-data-table__header-row">
+                <th class="mdc-data-table__header-cell mdc-data-table__header-cell--checkbox" role="columnheader" scope="col">
+                  <div class="mdc-checkbox mdc-data-table__header-row-checkbox mdc-checkbox--selected">
+                    <input type="checkbox" class="mdc-checkbox__native-control" aria-label="Toggle all rows"/>
+                    <div class="mdc-checkbox__background">
+                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                      </svg>
+                      <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                    <div class="mdc-checkbox__ripple"></div>
+                  </div>
+                </th>
+                <th class="mdc-data-table__header-cell mdc-data-table__header-cell--with-sort" role="columnheader" scope="col"  aria-sort="sortable" data-column-id="signal">Signal name</th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Status</th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Severity</th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Stage</th>
+                <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Time</th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Roles</th>
+              </tr>
+            </thead>
+            <tbody class="mdc-data-table__content">
+              <tr data-row-id="u0" class="mdc-data-table__row">
+                <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                  <div class="mdc-checkbox mdc-data-table__row-checkbox">
+                    <input type="checkbox" class="mdc-checkbox__native-control" aria-labelledby="u0"/>
+                    <div class="mdc-checkbox__background">
+                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                      </svg>
+                      <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                    <div class="mdc-checkbox__ripple"></div>
+                  </div>
+                </td>
+                <th class="mdc-data-table__cell" scope="row" id="u0">Arcus watch slowdown</th>
+                <td class="mdc-data-table__cell">Online</td>
+                <td class="mdc-data-table__cell">Medium</td>
+                <td class="mdc-data-table__cell">Triaged</td>
+                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">0:33</td>
+                <td class="mdc-data-table__cell">Allison Brie</td>
+              </tr>
+              <tr data-row-id="u1" class="mdc-data-table__row mdc-data-table__row--selected" aria-selected="true">
+                <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                  <div class="mdc-checkbox mdc-data-table__row-checkbox mdc-checkbox--selected">
+                    <input type="checkbox" class="mdc-checkbox__native-control" checked aria-labelledby="u1"/>
+                    <div class="mdc-checkbox__background">
+                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                      </svg>
+                      <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                    <div class="mdc-checkbox__ripple"></div>
+                  </div>
+                </td>
+                <th class="mdc-data-table__cell" scope="row" id="u1">monarch: prod shared ares-managed-features-provider-heavy</th>
+                <td class="mdc-data-table__cell">Offline</td>
+                <td class="mdc-data-table__cell">Huge</td>
+                <td class="mdc-data-table__cell">Triaged</td>
+                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">0:33</td>
+                <td class="mdc-data-table__cell">Brie Larson</td>
+              </tr>
+              <tr data-row-id="u2" class="mdc-data-table__row mdc-data-table__row--selected" aria-selected="true">
+                <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                  <div class="mdc-checkbox mdc-data-table__row-checkbox mdc-checkbox--selected">
+                    <input type="checkbox" class="mdc-checkbox__native-control" checked aria-labelledby="u2"/>
+                    <div class="mdc-checkbox__background">
+                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                      </svg>
+                      <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                    <div class="mdc-checkbox__ripple"></div>
+                  </div>
+                </td>
+                <th class="mdc-data-table__cell" scope="row" id="u2">monarch: prod shared ares-managed-features-provider-heavy</th>
+                <td class="mdc-data-table__cell">Online</td>
+                <td class="mdc-data-table__cell">Minor</td>
+                <td class="mdc-data-table__cell">Not triaged</td>
+                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">0:33</td>
+                <td class="mdc-data-table__cell">Jeremy Lake</td>
+              </tr>
+              <tr data-row-id="u3" class="mdc-data-table__row">
+                <td class="mdc-data-table__cell mdc-data-table__cell--checkbox">
+                  <div class="mdc-checkbox mdc-data-table__row-checkbox">
+                    <input type="checkbox" class="mdc-checkbox__native-control" aria-labelledby="u3"/>
+                    <div class="mdc-checkbox__background">
+                      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                      </svg>
+                      <div class="mdc-checkbox__mixedmark"></div>
+                    </div>
+                    <div class="mdc-checkbox__ripple"></div>
+                  </div>
+                </td>
+                <th class="mdc-data-table__cell" scope="row" id="u3">Arcus watch slowdown</th>
+                <td class="mdc-data-table__cell">Online</td>
+                <td class="mdc-data-table__cell">Negligible</td>
+                <td class="mdc-data-table__cell">Triaged</td>
+                <td class="mdc-data-table__cell mdc-data-table__cell--numeric">0:33</td>
+                <td class="mdc-data-table__cell">Angelina Cheng</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+
+
+  <!------dialog------->
+  <div class="mdc-dialog mdc-dialog--open mdc-dialog--fullscreen">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="my-dialog-title"
+        aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__header">
+          <h2 class="mdc-dialog__title" id="my-dialog-title">
+            Full-Screen Dialog Title
+          </h2>
+          <button class="mdc-icon-button material-icons mdc-dialog__close"
+                  data-mdc-dialog-action="close">
+            close
+          </button>
+        </div>
+        <div class="mdc-dialog__content" id="my-dialog-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Sed scelerisque metus dapibus, maximus massa pulvinar, commodo nunc.
+          Quisque vitae luctus lectus, ut tempus ipsum. Sed suscipit gravida scelerisque.
+          Aenean vulputate elementum est, quis consectetur orci consectetur ac.
+          Quisque accumsan vel nisi id dapibus. Suspendisse nec urna eu massa ornare rutrum.
+          Vivamus at nisi sit amet nulla pretium volutpat sit amet in justo. Donec mi metus,
+          interdum ac tincidunt at, vehicula vitae nisl. Morbi fermentum dapibus massa,
+          nec lobortis massa vestibulum eu.
+        </div>
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button"
+                  data-mdc-dialog-action="ok">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">OK</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+
+
+    <script>
+
+      //console.log(mdc);
+
+      const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+      const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+      topAppBar.setScrollTarget(document.getElementById('main-content'));
+      topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
+      });
+
+      const list = mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
+      list.wrapFocus = true;
+      list.singleSelection = true;
+
+      mdc.list.MDCList.attachTo(document.querySelector('.mdc-list'));
+
+      //mdc.dataTable.MDCDataTable
+      const cdataTable = mdc.dataTable.MDCDataTable.attachTo(document.querySelector('.mdc-data-table'));
+      console.log(cdataTable);//headerRow.cells[0].innerText
+      //cdataTable.layout();
+
+      cdataTable.listen("MDCDataTable:selectedAll", () => {
+        console.log(cdataTable.getSelectedRowIds());
+      });
+     
+      cdataTable.listen("MDCDataTable:rowSelectionChanged", (e) => {
+        //console.log(e.detail.rowIndex); //detail.MDCDataTableRowSelectionChangedEventDetail
+        //console.log(cdataTable.getSelectedRowIds());
+        var ridx=cdataTable.getRowByIndex(e.detail.rowIndex);
+        console.log(ridx);
+      });
+
+      cdataTable.listen("MDCDataTable:sorted", () => {
+        console.log("sorted...");
+      });
+
+     //console.log(cdataTable.setSelectedRowIds(["0","1"]));
+     //console.log(cdataTable.getRows());
+     
+
+
+    </script>
+
+  </body>
+</html>
